@@ -1,0 +1,42 @@
+.navbar {
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+.navbar > ul{
+    display: flex;
+    list-style: none;
+}
+
+ul > li{
+  color: #252323;
+  font-size: larger;
+  margin: 20px;
+}
+
+.logo{
+  width: 80%;
+}
+
+li > a{
+  text-decoration: none;
+  color: #252323; 
+}
+
+.navsearch{
+  background-color: #ffffff;
+  color: #252323;
+  padding: 5px;
+  border-radius: 5.5px;
+  border: solid #252323 1px;
+  font-size: medium;
+}
+
+.searchbtn{
+  background-color: #ffffff;
+  color: #252323;
+  padding: 10px;
+}
