@@ -1,11 +1,11 @@
 .navbar > ul{
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 ul > li{
   color: #252323;
-  font-size: larger;
   margin: 20px;
 }
 
@@ -16,11 +16,19 @@ ul > li{
 li > a{
   text-decoration: none;
   color: #252323; 
+  font-weight: 400;
+  
 }
 
 .btn-primary{
   background-color: #f8f9fa !important;
   color: #252323 !important;
+  border-color: #f8f9fa !important;
+}
+
+.btn-primary:hover{
+  color:#ff64e3 !important;
+  border: #f8f9fa !important;
 }
 
 .form-control{

@@ -20,7 +20,7 @@ function NavBar() {
                         <li><a href="#">Contacto</a></li>
                         <li>
                             <Dropdown>
-                                <Dropdown.Toggle  id="dropdown-basic">
+                                <Dropdown.Toggle id="dropdown-basic">
                                    Productos
                                 </Dropdown.Toggle>
 
