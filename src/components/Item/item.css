@@ -1,0 +1,6 @@
+.card{
+    display: flex;
+    position: relative;
+    border: solid 1px #252525;
+    border-radius: 5px;
+}

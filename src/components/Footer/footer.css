@@ -1,0 +1,29 @@
+.footer{
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.redes{
+    display: flex;
+}
+.categoria{
+    margin-right: 35px;
+}
+
+ul > li {
+    list-style: none;
+}
+.logofoot{
+    position: relative;
+    width: 16vw;
+    height: 8vw;
+}
+
+.copy{
+    position: absolute;
+    top: 99%;
+    font-size: smaller;
+}

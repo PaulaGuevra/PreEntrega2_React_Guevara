@@ -8,27 +8,28 @@ import Form from 'react-bootstrap/Form';
 import CartWidget from "../CartWidget/Cartwidget";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+
 
 function NavBar() {
     return (
         <Container fluid> 
             <Navbar fixed="top" bg="light" expand="lg">
-                <Navbar.Brand href="#home"><Image className="logo" src={logo} /></Navbar.Brand>
+                <Navbar.Brand href="#home"><NavLink to={"/"}><Image className="logo" src={logo} /></NavLink></Navbar.Brand>
                 <nav className="navbar">
                     <ul> 
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><NavLink to={"/"}>Inicio</NavLink></li>
                         <li>
                             <Dropdown>
                                 <Dropdown.Toggle id="dropdown-basic">
-                                   Productos
+                                   Categorías
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">Labiales</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Máscaras de pestañas</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Rubores</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-4">Sombras</Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/ojos"}>Ojos</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/labios"}>Labios</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/rostro"}>Rostro</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/brochas"}>Brochas</NavLink></Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>

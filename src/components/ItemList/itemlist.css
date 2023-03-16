@@ -1,0 +1,7 @@
+.prodlist{
+    display: flex;
+}
+
+.producto{
+    background-color: rgba(252, 190, 244, 0.43);
+}

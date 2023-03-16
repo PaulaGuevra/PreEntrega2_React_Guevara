@@ -1,0 +1,26 @@
+.count{
+    display: flex;
+    position: fixed;
+    margin: 45px;
+}
+
+.sumbtn{
+    background-color: #f8f9fa;
+    color: #252525;
+    border: solid 0.5px #f6549c;
+    border-radius: 20px;
+    padding: revert;
+}
+
+.resbtn{
+    margin-left: 80px;
+    background-color: #f8f9fa;
+    color: #252525;
+    border: solid 0.5px #f6549c;
+    border-radius: 20px;
+    padding: revert;
+}
+
+.cantidad{
+    margin: 10px;
+}
