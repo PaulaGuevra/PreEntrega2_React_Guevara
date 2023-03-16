@@ -1,5 +1,6 @@
 .prodlist{
     display: flex;
+    flex-direction: row;
 }
 
 .producto{

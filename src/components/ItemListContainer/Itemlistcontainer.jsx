@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount.jsx";
 import ItemList from "../ItemList/ItemList";
+import Products from "../../mocks/products";
+
 
 
 function  ItemListContainer({categoryId, isCategoryRoute} ) {
     const [products, setProducts] = useState([]);
-
+     
     useEffect(()=> {
         const productsPromise = new Promise((resolve, reject) =>
-            setTimeout(()=> resolve(products), 2000)
+            setTimeout(()=> resolve(Products), 2000)
         );
 
         productsPromise
@@ -26,10 +28,8 @@ function  ItemListContainer({categoryId, isCategoryRoute} ) {
     }, [categoryId]);
 
     return (
-        <div >
+        <div className="itemlist" >
             <ItemList products={products}/>
-            <ItemCount/>
-           <p style={{color:"#f6549c", padding:"20px", margin:"160px", background:"#dcdcdc"}}> {categoryId} </p> 
         </div>       
     )
 }

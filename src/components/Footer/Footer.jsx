@@ -21,7 +21,6 @@ function Footer(){
                     <li><SocialIcon network="pinterest" bgColor="#f6549c" style={{ height: 40, width: 40 }}/></li>
                 </ul>
             </div>
-            <div className="copy">©2023 Developed by Paula Guevara</div>
             <div>
                 <img src={logo} alt="logo" className="logofoot" />
             </div>

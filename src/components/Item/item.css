@@ -1,6 +1,19 @@
+.cardg{
+    width: 200px;
+    display: flex;
+    flex-direction: row !important;
+}
+
 .card{
     display: flex;
-    position: relative;
+    align-items: center;
+    justify-content: center;
     border: solid 1px #252525;
     border-radius: 5px;
+    width: 18rem;
+}
+
+.imgcard{
+    height: 90px;
+    width: 50px;
 }
