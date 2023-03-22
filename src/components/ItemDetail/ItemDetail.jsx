@@ -9,7 +9,7 @@ function ItemDetail({details}){
     return(
         <div className="row">
             <div className="col-md-4 offset-md-2">
-                <img src="{details.image}" className="img-fluid" />
+                <img src={details.image} className="img-fluid" />
             </div>
             <div className="col-md-4">
                 <h3 className="name-detail">{details.Item}</h3>
