@@ -6,4 +6,5 @@
 .itemmap{
     display: flex !important;
     flex-flow: wrap;
+    justify-content: space-evenly;
 }

@@ -3,18 +3,18 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 
-function ItemDetailContainer({itemId}){
+function ItemDetailContainer({id}){
     const [details, setDetails] = useState({});
 
     useEffect(() => {
         const detailsPromise = new Promise((resolve, reject) =>
-        setTimeout(() => resolve(Products.find(itemId => itemId.id == itemId)), 2000)
+        setTimeout(() => resolve(Products.find(product => product.id == id)), 2000)
         );
 
         detailsPromise
         .then((response) => setDetails(response))
         .catch((err)=> alert(err));
-    }, [itemId]);
+    }, [id]);
     return(
         <div>
             <ItemDetail details={details}/>
