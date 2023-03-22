@@ -7,14 +7,14 @@ import { useParams } from "react-router-dom";
 function Root() {
 
   const params = useParams();
-  const isCategoryRoute = Boolean(params.id);
+  const isCategoryRoute = (params.category);
 
   return (
     <div>
       <Header/>
       <ItemListContainer
         isCategoryRoute={isCategoryRoute}
-        categoryId={params.id} 
+        categoryId={params.category} 
       />
       <Footer/>
     </div>

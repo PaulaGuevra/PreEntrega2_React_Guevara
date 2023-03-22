@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Root from './routes/root'
+import Root from './routes/Root'
 import './index.css'
-import ItemRoot from './routes/itemroot'
+import ItemRoot from './routes/Itemroot'
 
 
 import {
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
     element: <Root />,
   },
   {
-    path: "/category/:id",
+    path: "/category/:category",
     element: <Root />,
   },
   {
-    path: "/item/:id",
+    path: "/item/:id",    
     element: <ItemRoot />,
   },
   {

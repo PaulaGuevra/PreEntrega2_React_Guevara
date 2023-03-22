@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemCount from "../ItemCount/ItemCount.jsx";
 import ItemList from "../ItemList/ItemList";
-import Products from "../../mocks/products";
+import Products from "../../mocks/Products";
+import "./itemlistcontainer.css";
 
 
 
@@ -17,7 +17,7 @@ function  ItemListContainer({categoryId, isCategoryRoute} ) {
             .then((response)=> {
                 if(isCategoryRoute){
                     const productsFiltered = response.filter(
-                        ({product}) => product.category === categoryId
+                        ({product}) => product.key === categoryId
                     );
                     setProducts(productsFiltered);
                 } else {

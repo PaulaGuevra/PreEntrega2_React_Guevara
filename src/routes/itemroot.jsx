@@ -6,11 +6,11 @@ import { useParams } from "react-router-dom";
 
 function ItemRoot() {
     const params = useParams();
-    const isItemRoute = Boolean(params.id);
+    const product = (params.id);
   return (
     <div>
       <Header/>
-      <ItemDetailContainer isItemRoute={isItemRoute} />
+      <ItemDetailContainer id={product} />
       <Footer/>
     </div>
     

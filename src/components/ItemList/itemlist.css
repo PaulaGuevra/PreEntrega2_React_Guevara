@@ -1,8 +1,5 @@
 .prodlist{
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
 }
 
-.producto{
-    background-color: rgba(252, 190, 244, 0.43);
-}

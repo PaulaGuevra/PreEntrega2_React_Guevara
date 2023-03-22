@@ -1,13 +1,14 @@
-import Products from "../../mocks/products.jsx";
+import Products from "../../mocks/Products.jsx";
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
-function ItemDetailContainer({itemId, isItemRoute}){
-    const [details, setDetails] = useState([]);
+
+function ItemDetailContainer({itemId}){
+    const [details, setDetails] = useState({});
 
     useEffect(() => {
-        const detailsPromise = new Promise.resolve((resolve, reject) =>
-        setTimeout(() => resolve(Products), 2000)
+        const detailsPromise = new Promise((resolve, reject) =>
+        setTimeout(() => resolve(Products.find(itemId => itemId.id == itemId)), 2000)
         );
 
         detailsPromise

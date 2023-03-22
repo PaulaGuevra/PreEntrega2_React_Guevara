@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 function NavBar() {
     return (
         <Container fluid> 
-            <Navbar fixed="top" bg="light" expand="lg">
+            <Navbar bg="light" expand="lg">
                 <Navbar.Brand href="#home"><NavLink to={"/"}><Image className="logo" src={logo} /></NavLink></Navbar.Brand>
                 <nav className="navbar">
                     <ul> 
@@ -26,10 +26,10 @@ function NavBar() {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item ><NavLink to={"/category/ojos"}>Ojos</NavLink></Dropdown.Item>
-                                    <Dropdown.Item ><NavLink to={"/category/labios"}>Labios</NavLink></Dropdown.Item>
-                                    <Dropdown.Item ><NavLink to={"/category/rostro"}>Rostro</NavLink></Dropdown.Item>
-                                    <Dropdown.Item ><NavLink to={"/category/brochas"}>Brochas</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/Ojos"}>Ojos</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/Labios"}>Labios</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/Rostro"}>Rostro</NavLink></Dropdown.Item>
+                                    <Dropdown.Item ><NavLink to={"/category/Brochas"}>Brochas</NavLink></Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </li>
