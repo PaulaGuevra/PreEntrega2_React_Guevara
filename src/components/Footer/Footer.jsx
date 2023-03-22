@@ -1,6 +1,7 @@
 import "./footer.css"
 import logo from "../../assets/logo.png"
 import { SocialIcon } from "react-social-icons"
+import { Link } from "react-router-dom"
 
 function Footer(){
     return (
@@ -8,10 +9,10 @@ function Footer(){
             <div className="categoria">
                 <h6>Categorías</h6>
                 <ul>
-                    <li>Ojos</li>
-                    <li>Labios</li>
-                    <li>Rostro</li>
-                    <li>Brochas</li>
+                    <li><Link to={"/category/Ojos"}>Ojos</Link></li>
+                    <li><Link to={"/category/Labios"}>Labios</Link></li>
+                    <li><Link to={"/category/Rostro"}>Rostro</Link></li>
+                    <li><Link to={"/category/Brochas"}>Brochas</Link></li>
                 </ul>
             </div>
             <div>

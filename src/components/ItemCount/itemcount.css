@@ -1,7 +1,7 @@
 .count{
-    display: flex;
-    position: fixed;
-    margin: 45px;
+    justify-self: center;
+    position: inherit;
+    margin: 15px;
 }
 
 .sumbtn{

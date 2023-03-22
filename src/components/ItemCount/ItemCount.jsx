@@ -31,10 +31,10 @@ if(counter<=1) {
   decrementCounter = () => setCounter(1);
 } 
     return (
-        <div> 
-         <ButtonDecrement onClickFunc={decrementCounter}/>
-        <Display message={counter}/> 
-        <ButtonIncrement onClickFunc={incrementCounter}/>
+        <div className="count"> 
+          <ButtonDecrement onClickFunc={decrementCounter}/>
+          <Display message={counter}/> 
+          <ButtonIncrement onClickFunc={incrementCounter}/>
         </div>
     );
 }
