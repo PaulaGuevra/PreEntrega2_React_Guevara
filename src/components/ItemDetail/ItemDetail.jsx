@@ -1,6 +1,5 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import { Button } from "react-bootstrap";
 import "./itemdetail.css";
 
 function ItemDetail({details}){
@@ -13,8 +12,8 @@ function ItemDetail({details}){
             <div className="col-md-4 detalles">
                 <h3 className="name-detail">{details.name}</h3>
                 <p>{details.description}</p>
+                <p>{details.price}</p>
                 <ItemCount/>
-                <Button>Agregar al Carrito</Button>
             </div>
         </div>
         

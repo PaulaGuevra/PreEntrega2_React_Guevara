@@ -1,42 +1,27 @@
-import "./itemcount.css"
-import { useState } from 'react'
+import React, { useContext } from "react";
+import "./itemcount.css";
+import { useState } from 'react';
+import { DataContext } from "../../context/CartContext";
 
-function ButtonIncrement(props) {
-    return (
-      <button className="sumbtn" onClick={props.onClickFunc}>
-      +
-      </button>
-    )
-}
+const ItemCount = ({
+                      stock,
+                      initial = 1,
+                    }) => {
+                            const [counter, setCounter] = useState(initial);
+                            const handleAddItem = () =>  { setCounter(counter + 1) };
+                            const handleRemoveItem = () => {counter > 0 && setCounter(counter - 1)};
 
-function ButtonDecrement(props) {
-    return (
-      <button className="resbtn" onClick={props.onClickFunc}>
-      -
-      </button>
-    )
-}
+                            const value = useContext(DataContext);
+                            const addCart = value.addCart;
 
-function Display(props) {
-    return (
-      <label className="cantidad">{props.message}</label>
-    )
-}
+                                //return (
+                                  //<div>
+                                    //<button className="resbtn" onClick={handleRemoveItem}>-</button>
+                                    //<span className="cantidad">{counter}</span>
+                                    //<button className="sumbtn" onClick={handleAddItem}>+</button>
+                                    //<button className="addbtn" onClick={console.log("dos")}>Agregar al carrito</button>
+                                  //</div>
+                                //);
+                            };
 
-function ItemCount(){
-const [counter, setCounter] = useState(1);
-const incrementCounter = () => setCounter(counter + 1);
-let decrementCounter = () => setCounter(counter - 1);
-if(counter<=1) {
-  decrementCounter = () => setCounter(1);
-} 
-    return (
-        <div className="count"> 
-          <ButtonDecrement onClickFunc={decrementCounter}/>
-          <Display message={counter}/> 
-          <ButtonIncrement onClickFunc={incrementCounter}/>
-        </div>
-    );
-}
-
-export default ItemCount
+export default ItemCount;

@@ -16,7 +16,8 @@ export default [
     { 
         id: 1,
         name:"Paleta de sombras",
-        description: "Paleta de 18 sombras mate y satinadas de Huda Beauty ",
+        description: "Paleta de 18 sombras de Huda Beauty ",
+        price: 2300,
         stock: 10,
         image: Paletahb,
         category: "Ojos"
@@ -26,6 +27,7 @@ export default [
         id: 2,
         name:"Paleta Too Faced",
         description: "Paleta de sombras marca Too Faced",
+        price: "$3000",
         stock: 10,
         image: Paletatf,
         category: "Ojos"
@@ -35,6 +37,7 @@ export default [
         id: 3,
         name:"Lápiz delineador de ojos",
         description: "Lápiz delineador color negro",
+        price: "$500",
         stock: 10,
         image: Lapiz,
         category: "Ojos"
@@ -44,6 +47,7 @@ export default [
         id: 4,
         name:"Delineador en gel",
         description: "Delineador de ojos en gel negro",
+        price: "$800",
         stock: 10,
         image: Delineador,
         category: "Ojos"
@@ -53,6 +57,7 @@ export default [
         id: 5,
         name:"Lapiz labial Nude",
         description: "Labial Revlon color nude",
+        price: "$990",
         stock: 10,
         image: Liprevlon,
         category: "Labios"
@@ -62,6 +67,7 @@ export default [
         id: 6,
         name:"Lapiz labial Fucsia",
         description: "Labial L'oreal color fucsia",
+        price: "$1100",
         stock: 10,
         image: Liploreal,
         category: "Labios"
@@ -71,6 +77,7 @@ export default [
         id: 7,
         name:"Lapiz labial Rojo",
         description: "Labial YSL color rojo",
+        price: "$1500",
         stock: 10,
         image: Lipysl,
         category: "Labios"
@@ -80,6 +87,7 @@ export default [
         id: 8,
         name:"Polvo compacto",
         description: "Polvo compacto L'oreal",
+        price: "$2000",
         stock: 10,
         image: Compactloreal,
         category: "Rostro"
@@ -89,6 +97,7 @@ export default [
         id: 9,
         name:"Polvo compacto Vichy",
         description: "Polvo compacto tipo base de Vichy",
+        price: "$2500",
         stock: 10,
         image: Compactvichy,
         category: "Rostro"
@@ -98,6 +107,7 @@ export default [
         id: 10,
         name:"Polvo compacto Revlon",
         description: "Polvo compacto Revlon color nude",
+        price: "$1800",
         stock: 10,
         image: Compactrevlon,
         category: "Rostro"
@@ -107,6 +117,7 @@ export default [
         id: 11,
         name:"Máscara de pestañas Maybelline",
         description: "Máscara de pestañas Maybelline color negro",
+        price: "$900",
         stock: 10,
         image: Mascaramayb,
         category: "Ojos"
@@ -115,7 +126,8 @@ export default [
     { 
         id: 12,
         name:"Máscara de pestañas Too Faced",
-        description: "Máscara de pestañas Better than Sex color negro de Too Faced",
+        description: "Máscara de pestañas color negro de Too Faced",
+        price: "$1000",
         stock: 10,
         image: Mascaratf,
         category: "Ojos"
@@ -125,6 +137,7 @@ export default [
         id: 13,
         name:"Set de Brochas",
         description: "Set de brochas marca nacional",
+        price: "$2400",
         stock: 10,
         image: Brochas,
         category: "Brochas"

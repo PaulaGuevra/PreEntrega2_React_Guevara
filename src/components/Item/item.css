@@ -1,14 +1,17 @@
 
 .card{
-    display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px #252525;
-    border-radius: 5px;
     width: 18rem;
-}
+    height: 27.5rem !important;
+    margin: 25px;
+    padding: 0.5rem;
 
+}
+.prod-name{
+    text-align: center;
+}
 .imgcard{
-    height: 90px;
-    width: 50px;
+    height: 180px;
+    width: 140px;
 }

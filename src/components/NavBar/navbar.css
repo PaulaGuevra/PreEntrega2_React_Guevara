@@ -1,3 +1,7 @@
+.navbar{
+  justify-content: space-between !important;
+}
+
 .navbar > ul{
     display: flex;
     list-style: none;

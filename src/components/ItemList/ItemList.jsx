@@ -1,7 +1,11 @@
+import React, { useContext } from "react";
 import Item from "../Item/Item";
 import "./itemlist.css";
 
+
+
 function ItemList({products}){
+
     return(
         <div className="itemmap">
             {products.map((product) => (

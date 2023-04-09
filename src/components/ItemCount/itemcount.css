@@ -1,7 +1,7 @@
 .count{
-    justify-self: center;
     position: inherit;
     margin: 15px;
+    right: 39px;
 }
 
 .sumbtn{
@@ -21,6 +21,13 @@
     padding: revert;
 }
 
+.addbtn{
+    background-color: #f8f9fa;
+    color: #252525;
+    border: solid 0.5px #f6549c;
+    border-radius: 5px;
+    padding: revert;
+}
 .cantidad{
     margin: 10px;
 }

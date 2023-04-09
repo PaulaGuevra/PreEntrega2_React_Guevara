@@ -16,7 +16,7 @@ function ItemDetailContainer({id}){
         .catch((err)=> alert(err));
     }, [id]);
     return(
-        <div>
+        <div> 
             <ItemDetail details={details}/>
         </div>
         );
