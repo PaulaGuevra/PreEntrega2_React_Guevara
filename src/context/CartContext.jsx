@@ -28,7 +28,7 @@ export const DataProvider = (props) => {
     }
 
     const value = {
-        products : [products],
+        products : [Products],
         menu : [menu, setMenu], 
         addCart: addCart,
         cart: [cart, setCart]

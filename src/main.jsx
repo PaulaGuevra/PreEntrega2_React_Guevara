@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Root from './routes/Root'
 import './index.css'
 import ItemRoot from './routes/Itemroot'
-
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Cart from './routes/Cart'
 
 const router = createBrowserRouter([
