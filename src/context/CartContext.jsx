@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext} from "react";
+import React, { useState, useEffect, createContext, useMemo} from "react";
 import Products from "../mocks/Products";
 
 export const DataContext = createContext();
@@ -11,31 +11,55 @@ export const DataProvider = (props) => {
     useEffect(()=> {
         const product = Products
         setProducts(product)
-    }, [])
+    }, [...cart])
 
-    const addCart =(id) => {
-        const check = cart.every(item => {
-            return item.id !== id;
-        })
-        if(check) {
-           const data = products.filter(product =>{
-            return product.id === id
-           }) 
-           setCart([...cart, ...data])
-        }else {
-            alert("El producto ya se encuentra en el carrito.")
+    
+
+    function addCart(id) {
+        const isInCart = cart.some(item => item.id === id);
+        if (isInCart) {
+            alert('El producto ya se encuentra en el carrito.');
+        } else {
+            const itemToAdd = products.find(item => item.id === id);
+            setCart([...cart, itemToAdd]);
         }
     }
 
-    const value = {
-        products : [Products],
-        menu : [menu, setMenu], 
-        addCart: addCart,
-        cart: [cart, setCart]
-    }
+      function showCart() {
+        const { cart } = useContext(DataContext);
+      
+        if (cart.length === 0) {
+          return (<p>You haven't added any products yet</p>);
+        } else {
+      
+            return (
+            <ul>
+                {cart.map((item) => (
+                <li key={item.id}>
+                    {item.name} - ${item.price}
+                </li>
+                ))}
+            </ul>
+            );
+        }
+      }
+      
+      
+
+      const memoizedValue = useMemo(() => {
+        return {
+          products,
+          menu: [menu, setMenu], 
+          cart: [cart, setCart],
+          addCart,
+          showCart
+        };
+      }, [products, menu, setMenu, addCart, cart, setCart]);
+    
+      
 
     return(
-        <DataContext.Provider value={value}>
+        <DataContext.Provider value={memoizedValue}>
             {props.children}
         </DataContext.Provider>
 
