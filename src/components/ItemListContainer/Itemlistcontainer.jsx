@@ -1,37 +1,54 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import Products from "../../mocks/Products";
-import "./itemlistcontainer.css";
+import { DataContext } from "../../context/CartContext";
+import { useParams } from "react-router-dom";
+import {  collection, query, where, onSnapshot, getDocs } from "firebase/firestore";
+import { db } from "../../config/FirebaseConfig";
+import { Spinner } from "react-bootstrap";
 
 
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { categoryId } = useParams();
+  const { productList } = useContext(DataContext);
 
-function  ItemListContainer({categoryId, isCategoryRoute} ) {
-    const [products, setProducts] = useState([]);
-     
-    useEffect(()=> {
-        const productsPromise = new Promise((resolve, reject) =>
-            setTimeout(()=> resolve(Products), 2000)
-        );
+  useEffect(() => {
+    const productCollection = collection(db, 'items');
+    const request = categoryId ? query(productCollection, 
+      where('category', '==', categoryId)
+    ) : productCollection;
 
-        productsPromise
-            .then((response)=> {
-                if(isCategoryRoute){
-                    const productsFiltered = response.filter(
-                        (product) => product.category === categoryId
-                    );
-                    setProducts(productsFiltered);
-                } else {
-                    setProducts(response);
-                }
-            })
-            .catch((err) => alert(err));
-    }, [categoryId]);
+    const getItem = async () => {
+      try {
+        const queryAnswer = await getDocs(request);
+        const itemsRef = queryAnswer.docs.map(item => {
+          return{
+            ...item.data(),
+            id: item.id,
+          };
+        })
+        setProducts(itemsRef)
+      } catch(error){
+        setError(error);
+      }
+      finally{
+        setIsLoading(false);
+      }
+    };    getItem();
+  }, [categoryId]);
+  
+  useEffect(()=>{
+    productList(products);
+  }, [products, productList])
 
-    return (
-        <div className="itemlist" >
-            <ItemList products={products}/>
-        </div>       
-    )
+  return (
+    <div>
+      {isLoading && <h1>Loading...</h1> && <Spinner/>}
+      {error && <h1>{error.message}</h1>}
+      {products.length > 0 && <ItemList products={products} key={categoryId} />}
+    </div>
+  );
 }
-
 export default ItemListContainer;

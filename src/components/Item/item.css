@@ -1,4 +1,3 @@
-
 .card{
     align-items: center;
     justify-content: center;
@@ -15,3 +14,19 @@
     height: 180px;
     width: 140px;
 }
+.addbtn{
+    margin: 1rem;
+    color: #252525;
+    background-color: #ffffff;
+    border-color: #f6549c;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.addbtn:hover{
+    background-color: #f6549c;
+    color: #ffffff;
+  }

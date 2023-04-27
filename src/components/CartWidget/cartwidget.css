@@ -1,10 +1,3 @@
-.cart{
-    color: #252323;
-    margin-right: 40px;
-}
-
-span{
-    color: #252323;
-    margin-right: 20px;
-    margin-left: -40px;
+.cart_icon{
+    display: flex;
 }

@@ -3,3 +3,7 @@
     flex-direction: row !important;
 }
 
+.itemmap{
+    display: flex;
+    flex-wrap: wrap;
+}

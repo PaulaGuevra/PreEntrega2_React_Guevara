@@ -1,7 +1,31 @@
 .imgdet{
-    width: 300px;
+    width: 55%;
     margin: 20px;
 }
+.imgdet:hover {
+    cursor: zoom-in;
+  }
+  
+  .imgdet:hover::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    background-image: url('path/to/magnifying-glass-icon.png');
+    background-size: cover;
+    z-index: 999;
+  }
+  
+  .imgdet:active {
+    cursor: zoom-out;
+  }
+  
+  .imgdet:active::before {
+    content: none;
+  }
+  
 .detalles{
     display: flex;
     flex-direction: column;
@@ -11,3 +35,18 @@
 h5{
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    .imgdet:hover {
+      transform: scale(1.5);
+      z-index: 1;
+    }
+  
+    .imgdet:hover::before {
+      display: none;
+    }
+  
+    .imgdet:active {
+      transform: scale(1);
+    }
+  }
