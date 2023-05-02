@@ -4,8 +4,8 @@ import Root from './routes/Root';
 import './index.css';
 import ItemRoot from './routes/Itemroot';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import CartRoot from './routes/CartRoot';
-import Form from "./components/CheckoutForm/Form"; 
+import CartRoot from './routes/CartRoot'; 
+import CheckoutRoot from './routes/CheckoutRoot';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/checkout", 
-    element: <Form />,
+    element: <CheckoutRoot />,
   }
 ]);
 

@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 import { useParams } from "react-router-dom";
 import { Cart } from "../components/Cart/Cart";
 import { DataProvider } from "../context/CartContext";
-import Form from "../components/CheckoutForm/Form";
+import Form from "../components/Form/Form";
 
 function Root() {
   const params = useParams();

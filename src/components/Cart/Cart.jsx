@@ -104,9 +104,7 @@ export const Cart = () => {
         </ul>
       );
     }
-  };
-
-
+  } 
   
   useEffect(() => {
     const newTotalPrice = calculateTotalPrice();
@@ -137,9 +135,10 @@ export const Cart = () => {
             {cartItems.length !== 0 && <button className="clearbtn" onClick={clearCart}>Vaciar mi carrito</button>}             </div>
             </div>
         </div>
-        
     </div>
 );
+
+
 
 };
 
